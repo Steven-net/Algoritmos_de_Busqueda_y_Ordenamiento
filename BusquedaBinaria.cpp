@@ -1,6 +1,8 @@
 // ALGORITMO DE BUSQUEDA "BUSQUEDA BINARIA"
 // busqueda binaria: primeramente debemos tener el arreglo ordenado, este algoritmo 
-// trata de 
+// trata de buscar el valor en tu arreglo  agarrando el elemento del medio como referencia 
+// y si es menor entonces este realiza lo mismo con el arreglo de la izquierda en caso contrario
+// analiza el de la derecha hasta que el elemento medio sea igual al valor.
 
 #include <iostream>
 #include <algorithm>
@@ -12,7 +14,7 @@ int BusqBinaria(int arr[], int n, int valor){
     int medio;
 
     while(inicio<=fin){
-        medio = inicio + (final-inicio)/2; // toma el valor medio del arreglo
+        medio = inicio + (fin-inicio)/2; // toma el valor medio del arreglo
         if(arr[medio] == valor){
             return medio; // retorna el valor medio si es igual al valor deseado
         }else if(arr[medio] < valor){
